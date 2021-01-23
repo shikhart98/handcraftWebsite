@@ -33,7 +33,7 @@ CREATE TABLE `products` (
   `ProductSubCategory` varchar(100) NOT NULL,
   `ProductName` varchar(100) NOT NULL,
   `ProductPrice` int(4) NOT NULL,
-  `ProductImage` varchar(50) NOT NULL,
+  `ProductImage` longtext NOT NULL,
   `ProductDescription` varchar(100) NOT NULL,
   `ProductSeller` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

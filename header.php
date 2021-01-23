@@ -88,10 +88,10 @@ include 'includes/dbconnection.php';
         <?php
           if(isset($_SESSION['UserID'])){
             echo'
-            <li><a href="profile.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
-            <li><a href="profile.php"><i class="fa fa-heart" aria-hidden="true"></i> Wishlist</a></li>
-            <li><a href="profile.php"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Orders</a></li>
-            <li><a href="profile.php"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile</a></li>
+            <li><a href="profile.php?cart=1"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
+            <li><a href="profile.php?wishlist=1"><i class="fa fa-heart" aria-hidden="true"></i> Wishlist</a></li>
+            <li><a href="profile.php?order=1"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Orders</a></li>
+            <li><a href="profile.php?profile=1"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile</a></li>
             <li><a href="includes/signout.php" class="rounded-pill">log out </a></li></ul>';
           }
           else {

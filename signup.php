@@ -34,7 +34,7 @@ include 'header.php';
                 else if($error == 'successfull')
                 {
                     echo '<div class="alert alert-danger">Registered successfully <br> 
-                            Now you can <a href="signin.php"> <b> Log In</b> </a></div>
+                            Now you can <a href="login.php"> <b> Log In</b> </a></div>
                            ';
                 }
             }

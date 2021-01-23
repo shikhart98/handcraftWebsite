@@ -24,14 +24,14 @@ if(isset($_POST['submit']))
             else
             {
                 // fire up query to check whether it's an registered user or not
-                $stmt = "select * from users where email = '$emailAddress';";
+                $stmt = "select * from users where EmailID = '$emailAddress';";
                 $query = mysqli_query($conn,$stmt);
                 $result = mysqli_num_rows($query);
 
                 if($result>0)// password verify
                 {
                   $row = mysqli_fetch_assoc($query);
-                  $hashedPwd = password_verify($userPassword,$row['password']);
+                  $hashedPwd = password_verify($userPassword,$row['UserPwd']);
                   if ($hashedPwd == false)
                   {
                     header('Location:../login.php?login=passwordmissmatch&emailAddress='.$emailAddress.'');

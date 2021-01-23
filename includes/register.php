@@ -36,12 +36,9 @@ if(isset($_POST['submit']))
             {
                 // fire up quert 
                 $hashedPwd = password_hash($userPassword,PASSWORD_DEFAULT);
-                $username = $firstName . $lastName;
-                $inputQuery = "Insert into users(username, email, password, full_name) values('$username','$emailAddress','$hashedPwd', '$username');";
-                
-                $_SESSION['userName'] = $username;
-                $_SESSION['userEmail'] = $emailAddress;
-                $_SESSION['fullName'] = $username;
+
+                $inputQuery = "Insert into users(FirstName,LastName,EmailID,UserPwd) values('$firstName','$lastName','$emailAddress','$hashedPwd');";
+
                 $queryRun = mysqli_query($conn,$inputQuery);
 
                 header('Location:../signup.php?signup=successfull');

@@ -11,15 +11,8 @@
         <div class="col-lg-4"></div>
        <div class="col-lg-4 col-md-4" >
 
-       
-    <?php 
-        if (isset($_GET['logged_in'])) {  ?>  
-            
-            <h1 class="text-center pb-3 pt-3"><span class="hm_color"><b>Welcome </b></span> <?php $_SESSION['fullName'] ?></h1>
+       <h1 class="text-center pb-3 pt-3"><span class="hm_color"><b>Log</b></span> In</h1>
 
-        <?php } else { ?>
-
-            <h1 class="text-center pb-3 pt-3"><span class="hm_color"><b>Log</b></span> In</h1>
         <form action="includes/loginvalidate.php" method="post">
 
         <?php
@@ -72,10 +65,6 @@
             <p class="text-secondry text-center mt-3">Create a new Account ? <span class="font-weight-bolder"><a href="signup.php" class="hm_color"><b>Sign Up</b></a></span></p>
 
         </form>
-
-        <?php }
-    ?>
-    
 
        </div><!--form-->
 

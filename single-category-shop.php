@@ -27,7 +27,7 @@
                     <?php
                     foreach($products as $product){
                     echo'<div class="col-lg-3 col-md-3 col-sm-6" style="background-color:white;border:15px solid #f1f1f1;padding-top:10px;margin-bottom:20px">
-                    <a href="shop-single.php?productID=' . $product['ProductID'] . '&productCategory='.$category.'&productSubCategory='.$subType.'&productName='.$product['ProductName'].'&productPrice=' . $product['ProductPrice'] .'&productImage=' . $product['ProductImage'] . '">
+                    <a href="shop-single.php?productID=' . $product['ProductID'] . '&productCategory='.$category.'&productSubCategory='.$subType.'&productName='.$product['ProductName'].'&productPrice=' . $product['ProductPrice'] .'&productImage=' . $product['ProductImage'] . '&productDescription=' . $product['ProductDescription'] . '">
                         <div class="hm_service_box">
                             <div class="product_icon">
                                <img src=" ' . $product['ProductImage'] .  ' " alt="" data-loading="lazy" width="100%" height="250" style="border-radius:50%">

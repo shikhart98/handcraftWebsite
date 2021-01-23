@@ -1,0 +1,10 @@
+CREATE TABLE users (
+    UserID int(4) AUTO_INCREMENT PRIMARY KEY,
+    FirstName varchar(30) not null,
+    LastName varchar(30) not null,
+    EmailID varchar(30) not null,
+    UserPwd varchar(30) not null
+    )
+
+    
+    

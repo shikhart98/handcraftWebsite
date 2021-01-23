@@ -1,0 +1,4 @@
+1: Connection.php to dbConnection.php.
+2: can merge image or css folder.
+3: custom css in bootstrap.min.css.
+4: bootstrap css in style.css.

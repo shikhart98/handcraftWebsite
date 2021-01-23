@@ -1,10 +1,14 @@
 <?php
 
     //header
+    include 'includes/dbconnection.php';
     include 'header.php';
     $category = $_GET['category'];
     $subType = $_GET['subType'];
 
+    $stmt = "select * from products where ProductCategory = '$category' AND ProductSubCategory= '$subType';";
+    $query = mysqli_query($conn,$stmt);
+    $products = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
         
         <!--About section start-->
@@ -21,22 +25,21 @@
         ?>
                 <div class="row">
                     <?php
-                    for($i=1;$i<=12;$i++){
+                    foreach($products as $product){
                     echo'<div class="col-lg-3 col-md-3 col-sm-6" style="background-color:white;border:15px solid #f1f1f1;padding-top:10px;margin-bottom:20px">
-                    <a href="shop-single.php?productID=1234&productCategory='.$category.'&productSubCategory='.$subType.'&productName='.$category.' '.$subType.'&productPrice=Available soon">
+                    <a href="shop-single.php?productID=' . $product['ProductID'] . '&productCategory='.$category.'&productSubCategory='.$subType.'&productName='.$product['ProductName'].'&productPrice=' . $product['ProductPrice'] .'&productImage=' . $product['ProductImage'] . '">
                         <div class="hm_service_box">
                             <div class="product_icon">
-                               <img src="assets/placeholder.jpg" alt="" data-loading="lazy" width="100%" height="250" style="border-radius:50%">
+                               <img src=" ' . $product['ProductImage'] .  ' " alt="" data-loading="lazy" width="100%" height="250" style="border-radius:50%">
                             </div>
                             <hr>
-                            <h4 class="hm_color" style="text-transform:capitalize"> '.$category.' '.$subType.' '.$i.'</h4>
-                            
+                            <h4 class="hm_color" style="text-transform:capitalize"> ' . $product['ProductName'] . '</h4>
                         </div>
                          </a>
                     </div>';
                     }?>
                     
-            </div>
+                </div>
             </div>
         </div>
         

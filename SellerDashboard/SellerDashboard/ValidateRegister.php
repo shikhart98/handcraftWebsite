@@ -19,7 +19,7 @@ if(isset($_POST['submit']))
     else
     {
         //if input fields not empty and to check numbers in first name and last name
-        if(preg_match("/^[a-zA-Z]*$/",$firstName) || preg_match("/^[a-zA-Z]*$/",$lastName))
+        if(!preg_match("/^[a-zA-Z]*$/",$firstName) || !preg_match("/^[a-zA-Z]*$/",$lastName))
         {
             header('Location:Signup.php?signup=charactererror');
             exit();
@@ -28,7 +28,7 @@ if(isset($_POST['submit']))
         else
         {
             //validating email address
-            if(filter_var($emailAddress,FILTER_VALIDATE_EMAIL))
+            if(!filter_var($emailAddress,FILTER_VALIDATE_EMAIL))
             {
                 header('Location:Signup.php?signup=invalidemail');
                 exit();

@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
     else
     {
             //filter email address
-            if(filter_var($emailAddress,FILTER_VALIDATE_EMAIL))
+            if(!filter_var($emailAddress,FILTER_VALIDATE_EMAIL))
             {
                 header('Location:Login.php?login=invalidemail');
                 exit();
@@ -37,7 +37,7 @@ if(isset($_POST['submit']))
                     header('Location:Login.php?login=passwordmissmatch&emailAddress='.$emailAddress.'');
                     exit();
                   }
-                  elseif ($hashedPwd == true)
+                  else if ($hashedPwd == true)
                   {
                     $_SESSION['Seller_ID'] = $row['emailId'];
                     header('Location:index.php');

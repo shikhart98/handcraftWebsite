@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
     else
     {
             //filter email address
-            if(filter_var($emailAddress,FILTER_VALIDATE_EMAIL))
+            if(!filter_var($emailAddress,FILTER_VALIDATE_EMAIL))
             {
                 header('Location:../login.php?login=invalidemail');
                 exit();

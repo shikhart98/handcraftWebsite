@@ -14,6 +14,11 @@ $productPrice = $_GET['productPrice'];
 $productImage = $_GET['productImage'];
 
 $productDescription = $_GET['productDescription'];
+
+$loggedin = 1;
+if (!isset($_SESSION['UserID'])) {
+      $loggedin = 0;
+}
 ?>
 
 <script type="text/javascript" src="script.js"></script>
@@ -26,6 +31,7 @@ $productDescription = $_GET['productDescription'];
       var productImage = '<?= $productImage?>';
       var productDescription = '<?= $productDescription?>';
       var productPrice = '<?= $productPrice?>';
+      var loggedin = '<?=$loggedin?>';
       var data = {
                         selected:'wishlist',
                         product: {
@@ -40,6 +46,9 @@ $productDescription = $_GET['productDescription'];
                   };
       
       function addToCart() {
+            if (loggedin == '0') {
+                  window.location.replace("http://localhost/handcraft/login.php");
+            }
             data.selected = 'cart';
             data.product.productQty = $('.prod_qty').val();
             $.ajax({
@@ -54,6 +63,9 @@ $productDescription = $_GET['productDescription'];
       }
 
       function addToWishlist() {
+            if (loggedin == '0') {
+                  window.location.replace("http://localhost/handcraft/login.php");
+            }
             data.selected = 'wishlist';
             $.ajax({
                   url: 'productSelected.php',

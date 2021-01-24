@@ -2,6 +2,29 @@
 
     //header.php
     include 'header.php';
+    if (isset($_GET) && isset($_GET['productID'])) {
+        if (isset($_GET['wishlist'])) {
+            for ($i=0;$i<sizeof($_SESSION['wishlist']);++$i) {
+                if ($_SESSION['wishlist'][$i]['productID'] == $_GET['productID']) {
+                    unset($_SESSION['wishlist'][$i]);
+                    break;
+                }
+            }
+            if (sizeof($_SESSION['wishlist']) == 0) {
+                unset($_SESSION['wishlist']);
+            }
+        } else if (isset($_GET['cart'])) {
+            for ($i=0;$i<sizeof($_SESSION['cart']);++$i) {
+                if ($_SESSION['cart'][$i]['productID'] == $_GET['productID']) {
+                    unset($_SESSION['cart'][$i]);
+                    break;
+                }
+            }
+            if (sizeof($_SESSION['cart']) == 0) {
+                unset($_SESSION['cart']);
+            }
+        }
+    }
 ?>
 
 <div class="hm_about_wrapper" style="background-color:#FFFFFF">
@@ -22,7 +45,8 @@
                             <div style="text-align:center;margin:10px;padding:10px;box-shadow:1px 5px 10px #d9d9d9;border-radius:10px;">
                             <img style="width:80%;"src="<?=$item['productImage']?>" alt="img"><br><br>
                              <b>Product Name:</b>  <?= $item['productName'] ?>
-                                <b> Quantity: </b>   <?= $item['productQty'] ?>
+                                <b> Quantity: </b>   <?= $item['productQty'] ?> <br><br>
+                                <a style="padding:10px; background-color:red; color:white;" href="profile.php?cart=1&productID=<?=$item['productID']?>"> <b> Remove </b> </a><br><br>
                             </div>  
                         <li>
                     <?php } ?>
@@ -41,7 +65,8 @@
                         <li style="float:right;display:inline;">
                             <div style="text-align:center;margin:10px;padding:10px;box-shadow:1px 5px 10px #d9d9d9;border-radius:10px;">
                             <img style="width:80%;"src="<?=$item['productImage']?>" alt="img"><br><br>
-                             <b>Product Name:</b>  <?= $item['productName'] ?>
+                             <b>Product Name:</b>  <?= $item['productName'] ?><br><br>
+                             <a style="border-radius:10px; padding:10px; background-color:red; color:white;" href="profile.php?wishlist=1&productID=<?=$item['productID']?>"> <b> Remove </b> </a> <br><br>
                             </div>  
                         <li>
                     <?php } ?>

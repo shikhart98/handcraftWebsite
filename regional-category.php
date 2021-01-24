@@ -10,42 +10,41 @@
                 </div>
                 <div class="row">
                     <div class="new_pro_inner">
-                    <a href="up/up.php?type=regional&sareeType=Uttar Pradesh">
+                    <a href="single-category-shop.php?category=regional&subType=Uttar Pradesh">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/UP.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="up/up.php?type=regional&sareeType=Uttar Pradesh"> 
-                                    Uttar Pradesh</a></h3>
+                                    <h3>Uttar Pradesh</h3>
                                 </div>
                             </div>
                         </div>
-                        </a>
+                    </a>
                         <!--2-->
-                        <a href="tl.php?type=regional&sareeType=Telanagana">
+                    <a href="single-category-shop.php?category=regional&subType=Telanagana">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/tl.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="tl.php?type=regional&sareeType=Telanagana"> Telanagana</a></h3>
+                                    <h3>Telanagana</h3>
                                     
                                 </div>
                             </div>
                         </div>
-                        </a>
+                    </a>
                         <!--3-->
-                        <a href="wb.php?type=regional&sareeType=West Bengal">
+                        <a href="single-category-shop.php?category=regional&subType=West Bengal">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/WB.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="wb.php?type=regional&sareeType=West Bengal"> West Bengal</a></h3>
+                                    <h3> West Bengal</h3>
                                     
                                 </div>
                             </div>
@@ -55,40 +54,40 @@
   </div>
                         <div class="row">
                     <div class="new_pro_inner">
-                        <a href="tn.php?type=regional&sareeType=Tamil Nadu">
+                    <a href="single-category-shop.php?category=regional&subType=Tamil Nadu">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/tn.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="tn.php?type=regional&sareeType=Tamil Nadu">Tamil Nadu</a></h3> 
+                                    <h3>Tamil Nadu</h3> 
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--5-->
-                           <a href="od.php?type=regional&sareeType=Odisha">
+                        <a href="single-category-shop.php?category=regional&subType=Odisha">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/od.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="od.php?type=regional&sareeType=Odisha"> Odisha</a></h3>   
+                                    <h3>Odisha</h3>   
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--6-->
-                        <a href="pb.php?type=regional&sareeType=Punjab">
+                        <a href="single-category-shop.php?category=regional&subType=Punjab">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/pb.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="pb.php?type=regional&sareeType=Punjab"> Punjab</a></h3>
+                                    <h3> Punjab </h3>
                                     
                                 </div>
                             </div>
@@ -99,85 +98,84 @@
   
                       <div class="row">
                     <div class="new_pro_inner">
-                    <a href="rj.php?type=regional&sareeType=Rajasthan">
+                    <a href="single-category-shop.php?category=regional&subType=Rajasthan">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/rj.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="rj.php?type=regional&sareeType=Rajasthan"> 
-                                    Rajasthan</a></h3>
+                                    <h3>
+                                    Rajasthan</h3>
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--2-->
-                        <a href="mh.php?type=regional&sareeType=Maharashtra">
+                        <a href="single-category-shop.php?category=regional&subType=Maharashtra">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/mh.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="mh.php?type=regional&sareeType=Maharashtra">Maharashtra</a></h3>
+                                    <h3> Maharashtra </h3>
                                     
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--3-->
-                        <a href="uk.php?type=regional&sareeType=Uttarakhand">
+                        <a href="single-category-shop.php?category=regional&subType=Uttarakhand">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/uk.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="uk.php?type=regional&sareeType=Uttarakhand">Uttarakhand</a></h3>
+                                    <h3> Uttarakhand </h3>
                                     
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--4-->
-                        <a href="sk.php?state=sikkim">
+                        <a href="single-category-shop.php?category=regional&subType=Sikkim">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/sk.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="sk.php?type=regional&sareeType=Sikkim">Sikkim
-                                    </a></h3>
+                                    <h3> Sikkim </h3>
                                     
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--5-->
-                        <a href="kr.php?type=regional&sareeType=Karnataka">
+                        <a href="single-category-shop.php?category=regional&subType=Karnataka">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/kr.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="kr.php?type=regional&sareeType=Karnataka">Karnataka</a></h3>
+                                    <h3> Karnataka </h3>
                                     
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--6-->
-                        <a href="bi.php?type=regional&sareeType=Bihar">
+                        <a href="single-category-shop.php?category=regional&subType=Bihar">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/bi.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="bi.php?type=regional&sareeType=Bihar">Bihar</a></h3>
+                                    <h3> Bihar </h3>
                                     
                                 </div>
                             </div>
@@ -188,85 +186,83 @@
                  
                     <div class="row">
                     <div class="new_pro_inner">
-                    <a href="jk.php?type=regional&sareeType=J&K">
+                    <a href="single-category-shop.php?category=regional&subType=Jammu and Kashmir">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/jk.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="jk.php?type=regional&sareeType=J&K">J&K 
-                                    </a></h3>
+                                    <h3> J&K </h3>
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--2-->
-                        <a href="gj.php?type=regional&sareeType=Gujrat">
+                        <a href="single-category-shop.php?category=regional&subType=Gujrat">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/gj.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="gj.php?type=regional&sareeType=Gujrat">Gujrat</a></h3>
+                                    <h3> Gujrat </h3>
                                     
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--3-->
-                        <a href="jh.php?type=regional&sareeType=Jharkhand">
+                        <a href="single-category-shop.php?category=regional&subType=Jharkhand">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/jh.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="jh.php?type=regional&sareeType=Jharkhand">Jharkhand</a></h3>
+                                    <h3> Jharkhand </h3>
                                     
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--4-->
-                        <a href="ap.php?type=regional&sareeType=Arunachal Pradesh">
+                        <a href="single-category-shop.php?category=regional&subType=Arunachal Pradesh">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/ap.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="ap.php?type=regional&sareeType=Arunachal Pradesh">Arunachal Pradesh
-                                    </a></h3>
+                                    <h3> Arunachal Pradesh </h3>
                                     
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--5-->
-                        <a href="am.php?type=regional&sareeType=Assam">
+                        <a href="single-category-shop.php?category=regional&subType=Assam">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/am.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="am.php?type=regional&sareeType=Assam">Assam</a></h3>
+                                    <h3> Assam </h3>
                                     
                                 </div>
                             </div>
                         </div>
                         </a>
                         <!--6-->
-                        <a href="mn.php?type=regional&sareeType=Manipur">
+                        <a href="single-category-shop.php?category=regional&subType=Manipur">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="new_pro_box">
                                 <div class="new_pro_img">
                                     <img src="assets/regional/mn.jpg" alt="handmade-craft-arrivals1" class="img-responsive" />
                                 </div>
                                 <div class="new_pro_data">
-                                    <h3><a href="mn.php?type=regional&sareeType=Manipur">Manipur</a></h3>
+                                    <h3> Manipur </h3>
                                     
                                 </div>
                             </div>

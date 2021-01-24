@@ -14,12 +14,11 @@
             <h1 class="text-center pb-3 pt-3"><span class="hm_color"><b>Welcome</b></span><br><br><br><?= $_SESSION['FirstName'] . ' ' . $_SESSION['LastName'] ?> </h1>
         <?php } else if (isset($_GET['cart']) && $_GET['cart'] == '1') { ?>
             <h1 class="text-center pb-3 pt-3"><span class="hm_color"><b><?= ucfirst($_SESSION['FirstName']) . "'s" ?> Cart</b></span></h1><br><br>
-            <div style="display:inline;">
                 <?php 
                 if (isset($_SESSION['cart'])) { ?>
                     <ul style="font-size:20px;list-style-type: none;">
                 <?php foreach ($_SESSION['cart'] as $item) { ?>
-                        <li style="float:right;display:flex;">
+                        <li style="float:right;display:inline;">
                             <div style="text-align:center;margin:10px;padding:10px;box-shadow:1px 5px 10px #d9d9d9;border-radius:10px;">
                             <img style="width:80%;"src="<?=$item['productImage']?>" alt="img"><br><br>
                              <b>Product Name:</b>  <?= $item['productName'] ?>
@@ -33,14 +32,13 @@
                         <b>EMPTY<b>
                         </h2>
                 <?php } ?>
-            </div>
         <?php } else if (isset($_GET['wishlist']) && $_GET['wishlist'] == '1') { ?>
             <h1 class="text-center pb-3 pt-3"><span class="hm_color"><b><?= ucfirst($_SESSION['FirstName']) . "'s" ?> Wishlist</b></span></h1><br><br>
             <?php 
                 if (isset($_SESSION['wishlist'])) { ?>
                     <ul style="font-size:20px;list-style-type: none;">
                 <?php foreach ($_SESSION['wishlist'] as $item) { ?>
-                        <li style="float:right;display:flex;">
+                        <li style="float:right;display:inline;">
                             <div style="text-align:center;margin:10px;padding:10px;box-shadow:1px 5px 10px #d9d9d9;border-radius:10px;">
                             <img style="width:80%;"src="<?=$item['productImage']?>" alt="img"><br><br>
                              <b>Product Name:</b>  <?= $item['productName'] ?>

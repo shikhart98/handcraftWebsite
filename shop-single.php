@@ -48,6 +48,7 @@ if (!isset($_SESSION['UserID'])) {
       function addToCart() {
             if (loggedin == '0') {
                   window.location.replace("http://localhost/handcraft/login.php");
+                  return;
             }
             data.selected = 'cart';
             data.product.productQty = $('.prod_qty').val();
@@ -65,6 +66,7 @@ if (!isset($_SESSION['UserID'])) {
       function addToWishlist() {
             if (loggedin == '0') {
                   window.location.replace("http://localhost/handcraft/login.php");
+                  return;
             }
             data.selected = 'wishlist';
             $.ajax({

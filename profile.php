@@ -22,7 +22,7 @@
                             <div style="margin:10px;padding:10px;border:2px solid #d9d9d9;border-radius:10px;"> <b>Product Name:</b>  <?= $item['productName'] ?>
                                    <b> Quantity: </b>   <?= $item['productQty'] ?>
                             </div>  
-                        <li> <br><br>
+                        <li>
                     <?php } ?>
                     </ul>
                 <?php } else { ?>
@@ -40,7 +40,7 @@
                     <li>
                             <div style="margin:10px;padding:10px;border:2px solid #d9d9d9;border-radius:10px;"> <b>Product Name:</b>  <?= $item['productName'] ?>
                             </div>  
-                        <li> <br><br>
+                        <li>
                     <?php } ?>
                     </ul>
                 <?php } else { ?>

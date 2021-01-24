@@ -4,9 +4,9 @@
     include 'header.php';
     if (isset($_GET) && isset($_GET['productID'])) {
         if (isset($_GET['wishlist'])) {
-            for ($i=0;$i<sizeof($_SESSION['wishlist']);++$i) {
-                if ($_SESSION['wishlist'][$i]['productID'] == $_GET['productID']) {
-                    unset($_SESSION['wishlist'][$i]);
+            foreach ($_SESSION['wishlist'] as $k=>$v) {
+                if ($v['productID'] == $_GET['productID']) {
+                    unset($_SESSION['wishlist'][$k]);
                     break;
                 }
             }
@@ -14,9 +14,9 @@
                 unset($_SESSION['wishlist']);
             }
         } else if (isset($_GET['cart'])) {
-            for ($i=0;$i<sizeof($_SESSION['cart']);++$i) {
-                if ($_SESSION['cart'][$i]['productID'] == $_GET['productID']) {
-                    unset($_SESSION['cart'][$i]);
+            foreach ($_SESSION['cart'] as $k=>$v) {
+                if ($v['productID'] == $_GET['productID']) {
+                    unset($_SESSION['cart'][$k]);
                     break;
                 }
             }

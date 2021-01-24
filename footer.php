@@ -43,20 +43,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
-            <div class="container">
-                <div class="row">
-         <div class="col-lg-10 col-md-12">
-                    <ul class="social-icons">
-                        <li><a rel="nofollow" href="http://www.facebook.com/templatemo" target="_parent"><i class="fa fa-facebook"></i></a></li>
-                        <li><a rel="nofollow" href="http://www.instagram.com/templatemo" target="_parent"><i class="fa fa-instagram"></i></a></li>
-                        <li><a rel="nofollow" href="http://www.whatsapp.com/templatemo" target="_parent"><i class="fa fa-whatsapp"></i></a></li>
-                    </ul>
-                </div>
-                </div>
-                </div>
-                
+        </div> 
         <!--bottom footer start-->
             <div class="hm_bottom_footer">
             <div class="container">

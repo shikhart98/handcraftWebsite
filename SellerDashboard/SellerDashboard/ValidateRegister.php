@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['submit']))
-{   
+{
     include 'Connection.php';
     //Getting values from user form
     $firstName    = $_POST['firstName'];

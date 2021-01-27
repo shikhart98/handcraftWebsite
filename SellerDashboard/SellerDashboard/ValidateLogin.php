@@ -27,7 +27,6 @@ if(isset($_POST['submit']))
                 $stmt = "select * from sellers where emailId = '$emailAddress';";
                 $query = mysqli_query($con,$stmt);
                 $result = mysqli_num_rows($query);
-
                 if($result>0)// password verify
                 {
                   $row = mysqli_fetch_assoc($query);

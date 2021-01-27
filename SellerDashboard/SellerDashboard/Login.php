@@ -69,8 +69,8 @@
                 }
                 ?>
             <div class="form-group">
-                <label for="email" class="text-dark">Password</label>
-                <input type="password" class="form-control" id="email" name="sellerPassword" placeholder="Password">
+                <label for="password" class="text-dark">Password</label>
+                <input type="password" class="form-control" id="password" name="sellerPassword" placeholder="Password">
             </div>
 
             <button type="submit" class="btn btn-danger btn-block ronded-0" name="submit">Log In</button>

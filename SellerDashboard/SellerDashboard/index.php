@@ -3,7 +3,7 @@
 
 include 'Connection.php';
 session_start();
-if(isset($_SESSION['Seller_ID']))
+if(!isset($_SESSION['Seller_ID']))
 {
   header("Location: Login.php");
 }

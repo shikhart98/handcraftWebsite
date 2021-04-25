@@ -16,7 +16,6 @@
         <form action="includes/loginvalidate.php" method="post">
 
         <?php
-        //catch error send back by registration validation
         if(isset($_GET['login']))
             {
                 $error = $_GET['login'];
@@ -63,7 +62,7 @@
             <br>
 
             <p class="text-secondry text-center mt-3">Create a new Account ? <span class="font-weight-bolder"><a href="signup.php" class="hm_color"><b>Sign Up</b></a></span></p>
-
+            <p class="text-secondry text-center mt-3"><span class="font-weight-bolder"><a href="forgot_password.php?step=1" class="hm_color"><b>Forgot Password?</b></a></span></p>
         </form>
 
        </div><!--form-->

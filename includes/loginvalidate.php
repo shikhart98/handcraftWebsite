@@ -43,6 +43,8 @@ if(isset($_POST['submit']))
                     $_SESSION['FirstName'] = $row['FirstName'];
                     $_SESSION['LastName'] = $row['LastName'];
                     $_SESSION['UserID'] = $row['UserID'];
+                    // seet cookies for login, to remember until user log out, cookies saved for 30 days
+                    setcookie("loginCookie",  $row['EmailID'] . "+". $row['FirstName'] . "+" . $row['LastName'] . "+" . $row['UserID'], time() + (86400 * 30),"/");
                     header('Location:../index.php');
                     exit();
                   }

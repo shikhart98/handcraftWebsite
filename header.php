@@ -1,6 +1,16 @@
 <?php
 session_start();
 include 'includes/dbconnection.php';
+
+// check login cookies if present set the session values else have to login
+if (isset($_COOKIE['loginCookie']) && $_COOKIE['loginCookie']) {
+    $val = explode("+",$_COOKIE['loginCookie']);
+    $_SESSION['EmailID'] = $val[0];
+    $_SESSION['FirstName'] = $val[1];
+    $_SESSION['LastName'] = $val[2];
+    $_SESSION['UserID'] = $val[3];
+}
+
  ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -46,7 +46,8 @@
                             <img style="width:80%;"src="<?=$item['productImage']?>" alt="img"><br><br>
                              <b>Product Name:</b>  <?= $item['productName'] ?>
                                 <b> Quantity: </b>   <?= $item['productQty'] ?> <br><br>
-                                <a style="padding:10px; background-color:red; color:white;" href="profile.php?cart=1&productID=<?=$item['productID']?>"> <b> Remove </b> </a><br><br>
+                                <a style="padding:10px; color:#002D62; font-weight:bold;" href="profile.php?order=1&productID=<?=$item['productID']?>&productImage=<?=$item['productImage']?>&productName=<?= $item['productName'] ?>&productQuantity=<?= $item['productQty'] ?>"> <b> Place Order </b> </a><br><br>
+                                <a style="padding:10px; color:red; font-weight:bold;" href="profile.php?cart=1&productID=<?=$item['productID']?>"> <b> Remove </b> </a><br><br>
                             </div>  
                         <li>
                     <?php } ?>
@@ -66,7 +67,7 @@
                             <div style="text-align:center;margin:10px;padding:10px;box-shadow:1px 5px 10px #d9d9d9;border-radius:10px;">
                             <img style="width:80%;"src="<?=$item['productImage']?>" alt="img"><br><br>
                              <b>Product Name:</b>  <?= $item['productName'] ?><br><br>
-                             <a style="border-radius:10px; padding:10px; background-color:red; color:white;" href="profile.php?wishlist=1&productID=<?=$item['productID']?>"> <b> Remove </b> </a> <br><br>
+                             <a style="border-radius:10px; padding:10px; color:red;" href="profile.php?wishlist=1&productID=<?=$item['productID']?>"> <b> Remove </b> </a> <br><br>
                             </div>  
                         <li>
                     <?php } ?>
@@ -78,6 +79,22 @@
                 <?php } ?>
         <?php } else if (isset($_GET['order']) && $_GET['order'] == '1') { ?>
             <h1 class="text-center pb-3 pt-3"><span class="hm_color"><b><?= ucfirst($_SESSION['FirstName']) . "'s" ?> Orders</b></span></h1>
+            <ul style="font-size:20px;list-style-type: none;">
+            <?php if (isset($_GET['productID'])) {
+                     $_SESSION['orders'][] = array("pname"=>$_GET['productName'],"pqty"=>$_GET["productQuantity"],"pimg"=>$_GET["productImage"]);
+            }?>
+                 <?php    foreach ($_SESSION['orders'] as $item) { ?>
+                        <li style="float:right;display:inline;">
+                            <div style="text-align:center;margin:10px;padding:10px;box-shadow:1px 5px 10px #d9d9d9;border-radius:10px;">
+                            <img style="width:80%;"src="<?=$item['pimg']?>" alt="img"><br><br>
+                             <b>Product Name:</b>  <?= $item['pname'] ?>
+                             <b> Quantity: </b>   <?= $item['pqty'] ?> <br><br>
+                            </div>  
+                        <li>
+                     <?php }
+                ?>
+            </ul>
+                
         <?php } else {?>
             <h1 class="text-center pb-3 pt-3"><span class="hm_color"><b>Welcome</b></span><br><br><br><?= ucfirst($_SESSION['FirstName']) . ' ' . ucfirst($_SESSION['LastName']) ?> </h1>
         <?php }?>

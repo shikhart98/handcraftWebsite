@@ -46,6 +46,8 @@ if (isset($_COOKIE['loginCookie']) && $_COOKIE['loginCookie']) {
     <link rel="stylesheet" href="js/plugin/owl/owl.carousel.css" />
     <link rel="stylesheet" href="css/style.css" media="screen" />
     <link rel="stylesheet" href="css/colors/default.css" id="colors" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -72,7 +74,11 @@ if (isset($_COOKIE['loginCookie']) && $_COOKIE['loginCookie']) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="hm_top_search">
-                            <input type="search" name="search" placeholder="Search....">
+                        <!-- implementing category base searching -->
+                        <!-- in further version feature based search techniques would be implemented -->
+                            <input onkeyup="suggestion();" type="search" id="search" name="search" placeholder="Search....">
+                            <div id="suggestionList" style="width:inherit;position:absolute;z-index:100;max-height:250px;overflow-y:auto;border-top-right-radius:0px !important; border-top-left-radius:0px !important; display:none;border-radius:5px; background:white; color:#fc5a6d;">
+                            </div>
                             <span class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></span>
                         </div>
                         

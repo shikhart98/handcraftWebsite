@@ -22,3 +22,44 @@ function getCookie(name) {
 function eraseCookie(name) {   
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
+
+var timeout;
+function suggestion() {
+    /*
+    Implemented DEBOUNCING for optimization of network calls.
+    */
+    clearTimeout(timeout);
+    var inputval = $('input[name=search]').val();
+    if (inputval != "") {
+        timeout = setTimeout(function () {
+            $.ajax({
+            url: "searchSuggestion.php",
+            method: "GET",
+            data: {data:inputval},
+            success: function (res) {
+                res = JSON.parse(res);
+                var displayItem = '';
+                res.forEach(function (item) {
+                    var pc = item.ProductCategory;
+                    var psc = item.ProductSubCategory;
+                    displayItem += '<div><a style="text-decoration:none; color:#fc5a6d;" href="single-category-shop.php?category=' + pc + '&subType=' + psc + '"><div style="padding:10px;text-align:center;border-bottom:1px solid #f2f2f2;"><span style="font-weight:bold;">' + pc + '</span> : ' + psc + '</div></a></div>';
+                });
+                $('#search').css('border-bottom-right-radius', '0px');
+                $('#search').css('border-bottom-left-radius', '0px');
+                $('#suggestionList').show();
+                if (displayItem == '') {
+                    $('#suggestionList').html('<div style="text-align:center;padding:10px;font-weight:bold;">No Result Found</div>');
+                } else {
+                    $('#suggestionList').html(displayItem);
+                }
+            }
+        });
+        }, 500);
+    } else {
+        $('#search').css('border-bottom-right-radius', '4px');
+        $('#search').css('border-bottom-left-radius', '4px');
+        $('#suggestionList').hide();
+    }
+    
+}
+

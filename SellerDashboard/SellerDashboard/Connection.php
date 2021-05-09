@@ -4,10 +4,10 @@
 	$user = 'root';
 	$pass = '';
 	$db_name = 'handcraft';
-
+	$db_name2 = 'handmade';
 	$con = mysqli_connect($host, $user, $pass, $db_name);
-
-	if($con){
+	$con2 = mysqli_connect($host, $user, $pass, $db_name2);
+	if($con && $con2){
 		echo "";
 	}
 	

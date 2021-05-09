@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+include 'includes/dbconnection.php';
 
 $productID = $_GET['productID'];
 
@@ -14,6 +15,12 @@ $productPrice = $_GET['productPrice'];
 $productImage = $_GET['productImage'];
 
 $productDescription = $_GET['productDescription'];
+
+$productSeller = $_GET['productSeller'];
+
+$stmt = "select * from products where ProductSeller = '$productSeller';";
+$query = mysqli_query($conn,$stmt);
+$productsByThisSeller = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
 $loggedin = 1;
 if (!isset($_SESSION['UserID'])) {
@@ -147,6 +154,7 @@ echo '
                                        
  <div class="item-categories"><b>Categories: </b> '.$productCategory.', '.$productSubCategory.'</div>
 
+ <div class="item-categories"><b>Seller: </b> '.$productSeller.'</div>
 </div>
                                
  </div>
@@ -161,10 +169,40 @@ echo '
            
  </div>
         
-</div>';
-       
+</div>';       
  ?>
+ <?php if (count($productsByThisSeller) > 1) { ?>
+<div class="hm_partners_wrapper">
+      <div class="container">
+            <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                        <h1 class="hm_heading">More products from this seller</h1>
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                        <div class="hm_partners_slider">
+                              <div class="owl-carousel owl-theme test_slider">
+                                    <?php
+                                    // <div class="item"><img src="images/partner1.jpg" alt="handmade-craft-client"></div>
+                                    foreach ($productsByThisSeller as $product) { 
+                                          if ($product['ProductID'] != $productID) {?>
+                                                <div class="item" style="margin:10px 30px;">
+                                                <a href="shop-single.php?productID=<?=$product['ProductID']?>&productCategory=<?=$product['ProductCategory']?>&productSubCategory=<?=$product['ProductSubCategory']?>&productName=<?=$product['ProductName']?>&productPrice=<?=$product['ProductPrice']?>&productSeller=<?=$product['ProductSeller']?>&productImage=<?=$product['ProductImage']?>&productDescription=<?=$product['ProductDescription']?>">
+                                                <img src="<?=$product['ProductImage']?>" alt="IMAGE"><h2 style="color:#fff;"><?=$product['ProductName']?></h2>
+                                                </a>
+                                                </div>
+                                    <?php }
+                                    }
+                                    ?>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
 
+ <?php } ?>
 
 
 <?php

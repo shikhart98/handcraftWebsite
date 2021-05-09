@@ -13,6 +13,8 @@ if($_POST['option1'] == 1 ){
     $description = $_POST['description'];
     $price = $_POST['price'];
     $City = $_POST['city'];
+    $category = $_POST['category'];
+    $subcategory = $_POST['subcategory'];
 
     function getProductId() { 
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; 
@@ -51,10 +53,13 @@ if($_POST['option1'] == 1 ){
             move_uploaded_file($file_tmp,"images/products/".$randString.$file_name);
     
             $q = "insert into products(id, email, title, price, description, quantity,location, image) values ('$randString','$id','$title','$price','$description','$quantity','$City', '$randString$file_name')";
+            $q2 = "insert into products(ProductCategory, ProductSubCategory, ProductName, ProductPrice, ProductImage, ProductDescription, ProductSeller) values ('$category','$subcategory','$title','$price','SellerDashboard/SellerDashboard/images/products/$randString$file_name','$description','$id')";
             $result = mysqli_query($con,$q);
-            if($result){
-                echo "<script type='text/javascript'>alert('Product Uploaded Successfully !');
+            $result2 = mysqli_query($con2,$q2);
+            if($result && $result2){
+                echo "<script type='text/javascript'>
                     window.location='index.php';
+                    alert('Product Uploaded Successfully !');
                     </script>";
             }
             else{

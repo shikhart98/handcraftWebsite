@@ -23,6 +23,8 @@
     <script type="text/javascript">
         
         function Validatation(){
+        //   document.getElementById('catname').value = (document.getElementById('category').value);
+        //   document.getElementById('subcatname').value = (document.getElementById('subcategory').value);
           var numbers = /^[0-9]+$/;
           var price = document.getElementById('price');
           var quantity = document.getElementById('quantity');
@@ -71,6 +73,25 @@
 
                             <h6 class="font-weight-bold pt-4 pb-1 text-dark">Description:</h6>
                             <textarea name="description" class="form-control" rows="7" placeholder="Write details about your product" required="required"></textarea>
+                            <div class="price">
+                                <h6 class="font-weight-bold pt-4 pb-1 text-dark">Item Sub-Category:</h6>
+                                <div class="row px-3">
+                                  <select name="subcategory" class="form-control" required="required" id="subcategory">
+                                    <option value="tshirts">T-shirts</option>
+                                    <option value="dupattas">Dupattas</option>
+                                    <option value="kurti">Kurti</option>
+                                    <option value="sarees">Sarees</option>
+                                    <option value="shirts">Shirts</option>
+                                    <option value="unstiched_shirts">Unstiched Shirts</option>
+                                    <option value="handbags">Handbags</option>
+                                    <option value="potlis">Potlis</option>
+                                    <option value="cross_body_bags">Cross Body Bags</option>
+                                    <option value="wallets">wallets</option>
+                                    <option value="earrings">earrings</option>
+                                    <option value="necklase">necklase</option>
+                                  </select>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="price">
@@ -83,6 +104,19 @@
                                 <h6 class="font-weight-bold pt-4 pb-1 text-dark">Item Price:</h6>
                                 <div class="row px-3">
                                   <input type="text" name="price" class="form-control" placeholder="Price" required="required" id="price">
+                                </div>
+                            </div>
+                            <!-- <input type="hidden" id="catname" name="category" value="">
+                            <input type="hidden" id="subcatname" name="subcategory" value=""> -->
+                            <div class="price">
+                                <h6 class="font-weight-bold pt-4 pb-1 text-dark">Item Category:</h6>
+                                <div class="row px-3">
+                                  <select name="category" class="form-control" required="required" id="category">
+                                    <option value="handloom">Handloom</option>
+                                    <option value="handcrafted">Handcrafted</option>
+                                    <option value="gift store">Gift Store</option>
+                                    <option value="home">Home</option>
+                                  </select>
                                 </div>
                             </div>
                             <div class="choose-file text-center my-4 py-4 rounded">

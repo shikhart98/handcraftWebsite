@@ -83,7 +83,8 @@
             <?php if (isset($_GET['productID'])) {
                      $_SESSION['orders'][] = array("pname"=>$_GET['productName'],"pqty"=>$_GET["productQuantity"],"pimg"=>$_GET["productImage"]);
             }?>
-                 <?php    foreach ($_SESSION['orders'] as $item) { ?>
+                 <?php if (isset($_SESSION['orders'])){    
+                     foreach ($_SESSION['orders'] as $item) { ?>
                         <li style="float:right;display:inline;">
                             <div style="text-align:center;margin:10px;padding:10px;box-shadow:1px 5px 10px #d9d9d9;border-radius:10px;">
                             <img style="width:80%;"src="<?=$item['pimg']?>" alt="img"><br><br>
@@ -92,6 +93,7 @@
                             </div>  
                         <li>
                      <?php }
+                     }
                 ?>
             </ul>
                 
